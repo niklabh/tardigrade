@@ -1,0 +1,27 @@
+[package]
+name = "tardigrade"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.66"
+description = "Execution-agnostic, time-agnostic, no_std, zero-allocation backoff & retry state machine."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/your-org/tardigrade"
+readme = "README.md"
+keywords = ["backoff", "retry", "no-std", "wasm", "embedded"]
+categories = ["no-std", "algorithms", "asynchronous"]
+
+[features]
+# Default build is pure `core`: no `std`, no `alloc`, no dynamic dispatch.
+default = []
+# Enables `alloc`-backed conveniences such as boxed (`dyn`) policies.
+alloc = []
+# Enables `std`-backed conveniences such as `SystemClock`.
+std = []
+
+[dependencies]
+
+[dev-dependencies]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
